@@ -39,6 +39,6 @@ using command [source lco_films_ans.sql]*/
 -- WHERE country.country = 'India'; 
 
 
-SELECT film.title
-FROM film_id
-INNER JOIN film_actor ON film.film_id = film_actor.film_id;
+-- SELECT film.title
+-- FROM film_id
+-- INNER JOIN film_actor ON film.film_id = film_actor.film_id;
