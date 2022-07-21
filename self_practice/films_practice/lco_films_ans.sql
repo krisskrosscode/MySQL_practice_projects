@@ -83,3 +83,26 @@ using command [source lco_films_ans.sql]*/
 -- ORDER BY COUNT(release_year) DESC 
 -- LIMIT 1; 
 
+-- TODO : Q10) In which year least number of films were released?
+
+-- SELECT release_year AS year_with_least_films , COUNT(release_year) AS no_of_films
+-- FROM film
+-- GROUP BY release_year
+-- ORDER BY COUNT(release_year) 
+-- LIMIT 1;
+
+
+-- TODO : Q11) Get the details of the film with maximum length released in 2014 .
+
+-- SELECT *
+-- FROM film
+-- WHERE release_year = 2014
+-- ORDER BY length DESC
+-- LIMIT 1;
+
+
+
+
+
+
+
