@@ -196,9 +196,19 @@ using command [source lco_films_ans.sql]*/
 -- VALUES ((SELECT film_id FROM film WHERE title = "ANGELS LIFE" ), (SELECT category_id FROM category WHERE name = "THriller"));
 
         -- To check if the new data is added, run the following query: 
-        
+
 -- SELECT film.title, category.name as Category
 -- FROM film
 -- INNER JOIN film_category ON film.film_id = film_category.film_id
 -- INNER JOIN category ON category.category_id = film_category.category_id
 -- WHERE film.title = "ANGELS LIFE";
+
+-- TODO : Q18) Which actor acted in most movies?
+
+-- SELECT actor.actor_id, CONCAT(actor.first_name, ' ', actor.last_name) AS Actor, COUNT(film_actor.actor_id) AS no_of_films
+-- FROM actor
+-- INNER JOIN film_actor ON actor.actor_id = film_actor.actor_id
+-- GROUP BY film_actor.actor_id
+-- ORDER BY COUNT(film_actor.actor_id) DESC
+-- LIMIT 1;
+
